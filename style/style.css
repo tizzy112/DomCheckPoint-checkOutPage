@@ -28,6 +28,7 @@
     border-radius: 10px;
     padding: 3%;
     margin: 50px 0;
+   justify-content: space-around;
   }
   .total-price span {
     font-size: 30px;
@@ -36,8 +37,14 @@
   .total {
     font-weight: bold;
   }
+  .deleteAll{
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
   .list-products {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     margin-top: 30px;
     width: 70%;
@@ -45,11 +52,12 @@
   .card {
     padding: 5%;
   }
+  
   .card-body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    align-items: center; 
   }
   
   .quantity {
@@ -66,4 +74,15 @@
   .fa-trash-alt {
     color: #de6b5c;
   }
-  
+  /*@media screen and(min-width:768px) {
+    .list-products{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    } 
+  }*/
+  @media screen and(max-width:768px) {
+    .shopping-card-container .list-products{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }

@@ -24,6 +24,39 @@ let goods = [
       isLiked: false,
       quantity: 0,
     },
+
+    {
+      image:
+        "https://images.unsplash.com/photo-1575032617751-6ddec2089882?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJhZ3xlbnwwfHwwfHx8MA%3D%3D",
+      nameOfProduct: "Bag",
+      price: 50,
+      isLiked: false,
+      quantity: 0,
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1575032617751-6ddec2089882?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJhZ3xlbnwwfHwwfHx8MA%3D%3D",
+      nameOfProduct: "Bag",
+      price: 50,
+      isLiked: false,
+      quantity: 0,
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1575032617751-6ddec2089882?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJhZ3xlbnwwfHwwfHx8MA%3D%3D",
+      nameOfProduct: "Bag",
+      price: 50,
+      isLiked: false,
+      quantity: 0,
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1575032617751-6ddec2089882?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJhZ3xlbnwwfHwwfHx8MA%3D%3D",
+      nameOfProduct: "Bag",
+      price: 50,
+      isLiked: false,
+      quantity: 0,
+    },
     {
       image:
         "https://images.unsplash.com/photo-1602351447937-745cb720612f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNha2V8ZW58MHx8MHx8fDA%3D",
@@ -105,7 +138,22 @@ let goods = [
               </div>
             </div>
      `;
-     
+     //styling img size with dom
+     const img = cardBody.querySelector(".card-img-top");
+     img.style.width = "100%";
+     img.style.height = "200px";
+
+     //using media query
+  /*   const mediaQuery = window.matchMedia("(max-width: 768px)");
+     mediaQuery.addEventListener("change", function() {
+      if (mediaQuery.matches) {
+        cardBody.style.gridTemplateColumns="1fr";
+        } else {
+          cardBody.style.gridTemplateColumns="1fr 1fr 1fr";
+          }
+          }); 
+ */
+
     /* for (let good in goods){
         let button = removeBtn[good]
         button.addEventListener("click", function (event) {
@@ -151,6 +199,16 @@ let goods = [
         updatePrice();
         updateUi();
     })
+    const deleteAll = document.getElementById("deleteAll");
+    deleteAll.addEventListener("click", ()=> {
+      prompt("Are you sure you want to delete all item cart?");
+     // alert("Are you sure you want to delete all item cart?");
+      goods.splice(goods);
+      cardContainer.innerHTML="";
+      updatePrice();     
+      //updateUi();
+      //alert("All cart items was deleted")
+    } )
 
 
   

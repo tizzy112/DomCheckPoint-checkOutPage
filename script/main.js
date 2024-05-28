@@ -201,7 +201,7 @@ let goods = [
     })
     const deleteAll = document.getElementById("deleteAll");
     deleteAll.addEventListener("click", ()=> {
-      prompt("Are you sure you want to delete all item cart?");
+      alert("Are you sure you want to delete all item cart?");
      // alert("Are you sure you want to delete all item cart?");
       goods.splice(goods);
       cardContainer.innerHTML="";
